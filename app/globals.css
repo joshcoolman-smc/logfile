@@ -270,7 +270,8 @@ body {
 }
 
 .prose pre {
-  border: 1px solid var(--rule);
+  background-color: #161b22 !important;
+  border: 1px solid #2a2f38;
   border-radius: 6px;
   padding: 20px;
   margin: 24px 0;
@@ -279,17 +280,19 @@ body {
 
 .prose pre code {
   background: none;
+  border: none;
   padding: 0;
   font-size: 14px;
   line-height: 1.5;
+  color: #e1e4e8;
 }
 
 .prose pre [data-theme] {
-  background-color: var(--surface) !important;
+  background-color: transparent !important;
 }
 
 .prose [data-rehype-pretty-code-figure] pre {
-  background: var(--surface);
+  background-color: #161b22 !important;
 }
 
 .prose hr {
