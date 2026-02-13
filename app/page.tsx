@@ -7,25 +7,26 @@ export default function Home() {
   const posts = getAllPosts();
 
   return (
-    <main className="home">
+    <div className="home-page">
       <Toolbar />
-      <div className="card-grid">
+      <main className="home">
+        <div className="card-grid">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/posts/${post.slug}`}
             className="card"
           >
-            {post.image && (
-              <span className="card-image">
+            <span className="card-image">
+              {post.image ? (
                 <Image
                   src={post.image}
                   alt={post.title}
                   width={450}
                   height={253}
                 />
-              </span>
-            )}
+              ) : null}
+            </span>
             <span className="card-body">
               <span className="card-title">{post.title}</span>
               <span className="card-date">
@@ -42,6 +43,7 @@ export default function Home() {
           </Link>
         ))}
       </div>
-    </main>
+      </main>
+    </div>
   );
 }
